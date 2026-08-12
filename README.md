@@ -4,13 +4,22 @@ credit for arduino uno firmware gcobos on github
 
 ### This arm is a 4DOF robotic arm using many parts from a broken creality Ender3 pro printer, all motors, and psu taken directly from that.
 
+  ![Parallel Gripper](<parallel gripper added.png>)
+  ![Parallel Gripper](<Screenshot 2026-07-16 183601.png>)
+
+
   ### Arm Overview
   This arm has 3 segments of arm, with 4 degrees of freedom with a initial yaw control with the rest rotating on the YZ plane (for the most part with one of the three offset by a bit).
   The motor driving avoids expensive robotic actuators, and instead of servos for arm positioning (still servos in the gripper setup), I use a custom design modular stackable 6 to 1 planetary gear reduction, linked to NEMA17 stepper motors all taken from an Creality ender3 pro printer.
   All motors use a double stacked system of my gearboxes (36 to 1) except my wrist joint which only uses a 6 to 1 setup.
   Load is offset from gearboxes using a rather simple fork design where a aluminum rod on the opposite side of the segment side with the gearboxes is pushed through some bearings in order to drastically reduce load on fragile plastic gearboxes.
 
-  Arm control hardware
+  ![Parallel Gripper](<Screenshot 2026-08-04 000632.png>)
+
+
+  ### Arm control hardware
+
+  ![Parallel Gripper](<Screenshot 2026-07-23 154006.png>)
 
   My design currently utilizes several widely available and cheap pcbs in order to deliver power and signal to motors.
     All systems controlled by a 24v psu taken out of a Ender3 printer, with an additional xt60 wired onto another V+ and V- for a separate output for Servo driving.
@@ -36,4 +45,4 @@ credit for arduino uno firmware gcobos on github
 
   Just to talk about the IK solving math I went with since its so cool to me I go with a analytical geometric (no matrices) solver using the law of cosines and simplifying the problem by using a tool angle, and looking at yaw separately.
 
-  hanks for making a great opportunity to grow as a builder stardance!!
+  ### Thanks for making a great opportunity to grow as a builder stardance!!
